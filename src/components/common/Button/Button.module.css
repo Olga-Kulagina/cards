@@ -1,0 +1,27 @@
+.default {
+    display: block;
+    width: 354px;
+    height: 45px;
+    border-radius: 35px;
+    font-size: 17px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #3061ff;
+    border-color: #3061ff;
+    margin: 10px;
+}
+
+.red {
+    display: block;
+    width: 354px;
+    height: 45px;
+    border-radius: 35px;
+    font-size: 17px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 10px;
+    background-color: #ff6f80;
+    border-color: #ff6f80;
+}
