@@ -1,9 +1,20 @@
-import React from 'react';
+.nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+}
 
-export const Header = () => {
-    return (
-        <div>
-            Header
-        </div>
-    )
+.item {
+    padding: 5px;
+}
+
+.item a {
+    color: rgba(34, 128, 204, 1);
+    text-decoration: none;
+    padding: 5px;
+}
+
+.item a.active {
+    color: darkblue;
 }
