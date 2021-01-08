@@ -5,7 +5,7 @@ type InitialStateType = typeof initialState
 
 
 
-export const appReducer = (state: InitialStateType, action: ActionsType) => {
+export const appReducer = (state: InitialStateType = initialState, action: ActionsType) => {
     switch (action.type) {
         case 'SET_INITIALIZED':
             return state
