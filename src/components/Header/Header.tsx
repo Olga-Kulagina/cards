@@ -9,6 +9,7 @@ export const Header = () => {
             <nav className={s.nav}>
                 <div className={`${s.item} ${s.active}`}>
                     <NavLink to={PATH.LOGIN} activeClassName={s.active}>Login</NavLink>
+                    <NavLink to={PATH.LOGOUT} activeClassName={s.active}>Logout</NavLink>
                     <NavLink to={PATH.REGISTRATION} activeClassName={s.active}>Registration</NavLink>
                     <NavLink to={PATH.PROFILE} activeClassName={s.active}>Profile</NavLink>
                     <NavLink to={PATH.PASS_RECOVERY} activeClassName={s.active}>Password recovery</NavLink>

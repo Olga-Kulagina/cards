@@ -7,9 +7,11 @@ import {Error404} from './Error404/404';
 import {PasswordRecovery} from './PasswordRecovery/PasswordRecovery';
 import {EnteringNewPassword} from './EnteringNewPassword/EnteringNewPassword';
 import {Test} from '../Test';
+import {Logout} from './Logout/Logout';
 
 export const PATH = {
     LOGIN: "/login",
+    LOGOUT: '/logout',
     REGISTRATION: "/registration",
     PROFILE: "/profile",
     ERROR404: "/404",
@@ -26,6 +28,7 @@ export const Main = () => {
 
 
                 <Route path={PATH.LOGIN} render={() => <Login/>}/>
+                <Route path={PATH.LOGOUT} render={() => <Logout/>}/>
                 <Route path={PATH.REGISTRATION} render={() => <Registration/>}/>
                 <Route path={PATH.PROFILE} render={() => <Profile/>}/>
                 <Route path={PATH.PASS_RECOVERY} render={() => <PasswordRecovery/>}/>
