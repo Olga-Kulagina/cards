@@ -51,10 +51,7 @@ export const Registration = () => {
 
 
     }
-    const deleteAcc = () => {
-        // debugger
-        dispatch(deleteAccTC())
-    }
+
     //login: jhbjhj@mijni.ruj password: 12345678
     if (registeredStatus) {
         return <Redirect to={'/login'}/>
@@ -76,11 +73,7 @@ export const Registration = () => {
                 {registeredStatus ? <p>{message}</p> : <p>{errorMessage}</p>}
 
             </div>
-            <div className={cl.center}>
-                <h3>if you want to delete your account</h3>
-                <Button onClick={deleteAcc}>click me</Button>
-                <p>joke,it's logout</p>
-            </div>
+
         </div>
     )
 }
