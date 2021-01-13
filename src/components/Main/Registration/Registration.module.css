@@ -1,0 +1,11 @@
+.registration{
+    display: flex;
+    flex-wrap: wrap;
+}
+.center{
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #cecece;
+    border-radius: 3px 23px;
+    padding: 3em 1em 2em;
+}
