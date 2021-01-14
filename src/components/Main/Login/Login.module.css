@@ -1,8 +1,13 @@
 .loginForm {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.submitBtn {
-    width: 100px;
+.center{
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #cecece;
+    border-radius: 3px 23px;
+    padding: 1em 1em 2em;
 }
