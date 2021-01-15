@@ -3,6 +3,7 @@ import thunkMiddleware from 'redux-thunk'
 import {appReducer} from './app-reducer';
 import {loginReducer} from './login-reducer';
 import {forgotReducer} from './forgot-reducer';
+import {profileReducer} from './profile-reducer';
 import registerReduser from "./registration-reduser";
 
 const rootReducer = combineReducers({
@@ -10,6 +11,7 @@ const rootReducer = combineReducers({
     login: loginReducer,
     registration: registerReduser,
     forgot: forgotReducer,
+    profile: profileReducer,
 })
 
 
