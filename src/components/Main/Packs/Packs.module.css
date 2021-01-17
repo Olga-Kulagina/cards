@@ -1,0 +1,22 @@
+.table {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid blue;
+    text-align: center;
+}
+
+.name {
+    width: 200px;
+}
+.count {
+    width: 100px;
+}
+.updated {
+    width: 200px;
+}
+.url {
+    width: 200px;
+}
+.buttons {
+    width: 200px;
+}

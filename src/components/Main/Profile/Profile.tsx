@@ -13,7 +13,7 @@ export const Profile = () => {
 
     useEffect(() => {
         dispatch(profileTC())
-    }, [])
+    })
 
     const userName = useSelector<AppRootStateType, string>(state => state.profile.name)
 
