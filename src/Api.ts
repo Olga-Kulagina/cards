@@ -19,3 +19,8 @@ export const RegistrationApi = {
         return instans.delete('auth/me')
     }
 }
+export const SetNewPass = {
+    set(password:string,resetPasswordToken:string){
+        return instans.post(`auth/set-new-password`,{password,resetPasswordToken})
+    }
+}

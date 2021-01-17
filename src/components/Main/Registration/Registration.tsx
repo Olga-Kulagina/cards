@@ -53,9 +53,9 @@ export const Registration = () => {
     }
 
     //login: jhbjhj@mijni.ruj password: 12345678
-    if (registeredStatus) {
-        return <Redirect to={'/login'}/>
-    }
+    // if (registeredStatus) {
+    //     return <Redirect to={'/login'}/>
+    // }
     return (
         <div className={cl.registration}>
             <div className={cl.center}>

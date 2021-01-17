@@ -1,5 +1,5 @@
 import {Dispatch} from "redux";
-import {RegistrationApi} from "../Api";
+import {RegistrationApi, SetNewPass} from "../Api";
 
 
 export type  initialStateType = {
@@ -66,6 +66,17 @@ export const registrationTC = (email: string, password: string) => (dispatch: Di
 export const deleteAccTC = () => (dispatch: Dispatch) =>{
     debugger
     RegistrationApi.deleteUser()
+        .then(res=>{
+            debugger
+            console.log(res);
+            // dispatch(succesRequestAC(message))
+        }).catch(err=>{
+            alert(err)
+    })
+}
+export const setNewPassTC = (pass:string,token:string) => (dispatch: Dispatch) =>{
+    debugger
+    SetNewPass.set(pass, token)
         .then(res=>{
             debugger
             console.log(res);
