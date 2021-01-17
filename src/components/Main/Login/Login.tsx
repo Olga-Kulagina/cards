@@ -5,6 +5,9 @@ import {useDispatch, useSelector} from 'react-redux';
 import {AppRootStateType} from '../../../redux/store'
 import {Redirect} from 'react-router-dom';
 import {loginTC} from '../../../redux/login-reducer';
+import Input from '../../common/Input/Input';
+import Checkbox from '../../common/Checkbox/Checkbox';
+import Button from '../../common/Button/Button';
 
 export const Login = () => {
     const dispatch = useDispatch()
@@ -27,25 +30,35 @@ export const Login = () => {
     }
 
     return (
-        <form onSubmit={formik.handleSubmit} className={s.loginForm}>
-            <label>
-                Email <input
-                type='email'
-                {...formik.getFieldProps('email')}
-            />
-            </label>
-            <label>
-                Password <input
-                type='password'
-                {...formik.getFieldProps('password')}
-            />
-            </label>
-            <label>
-                <input type='checkbox'
-                       {...formik.getFieldProps('rememberMe')}
-                /> Remember me
-            </label>
-            <button type="submit" className={s.submitBtn}>Sign in</button>
-        </form>
+        <div>
+
+            <form onSubmit={formik.handleSubmit} className={s.loginForm}>
+
+                <div className={s.center}>
+                    <h3>Login</h3>
+                    <label>
+                        <Input
+                            type='email'
+                            placeholder='email'
+                            {...formik.getFieldProps('email')}
+                        />
+                    </label>
+                    <label>
+                        <Input
+                            type='password'
+                            placeholder='password'
+                            {...formik.getFieldProps('password')}
+                        />
+                    </label>
+                    <label>
+                        <Checkbox type='checkbox'
+                                  {...formik.getFieldProps('rememberMe')}
+                        /> Remember me
+                    </label>
+                    <Button type="submit">Sign in</Button>
+                </div>
+            </form>
+        </div>
+
     )
 }
