@@ -29,10 +29,6 @@ export const Packs = () => {
     if(nameSearch){
         ollPacks= packs.filter(pack=> pack.name.includes(nameSearch) )
     }
-    // let [ollPacks,setOllPacks]=useState(packs)
-    // if(nameSearch){
-    //     setOllPacks(ollPacks.filter(pack=> pack.name.includes(nameSearch) ))
-    // }
     if(abcType==='ABC') {
         debugger
        ollPacks= [...ollPacks].sort((a, b) => {
@@ -49,9 +45,9 @@ export const Packs = () => {
             if (a.name > b.name) {return -1}
             return 0
         })
-        // setOllPacks(ollPacks)
+
     }
-        // if (isAuthorized) {
+        if (isAuthorized) {
     return (
         <div className={s.wrap}>
             <div className={s.flexWrap}>
@@ -87,12 +83,12 @@ export const Packs = () => {
     )
 }
 
-//
-//     return (
-//         <div className={s.center}>
-//             you are not authorized /ᐠ-ꞈ-ᐟ\
-//         </div>
-//     )
-//
-//
-// }
+
+    return (
+        <div className={s.center}>
+            you are not authorized /ᐠ-ꞈ-ᐟ\
+        </div>
+    )
+
+
+}
