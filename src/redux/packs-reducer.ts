@@ -15,14 +15,15 @@ type InitialStateType = {
 
 
 const initialState: InitialStateType = {
-    packs: [{
-        _id: '123',
-        cardsCount: 5,
-        name: 'Some name',
-        updated: 'never',
-        url: '111111',
-        userId: '321'
-    },
+    packs: [
+        {
+            _id: '123',
+            cardsCount: 5,
+            name: 'Some name',
+            updated: 'never',
+            url: '111111',
+            userId: '321'
+        },
         {
             _id: '12555',
             cardsCount: 6,
@@ -37,7 +38,8 @@ const initialState: InitialStateType = {
             updated: 'never',
             url: '111111',
             userId: '321'
-        }]
+        }
+    ]
 }
 
 type SetPacksType = ReturnType<typeof setPacks>
@@ -75,9 +77,9 @@ export const getPacksTC = () => (dispatch: Dispatch<ActionsType>) => {
 }
 export const addPackTC = () => (dispatch: Dispatch<ActionsType>) => {
     packsAPI.addPack()
-    .then((res) => {
-        dispatch(addPack())
-    })
+        .then((res) => {
+            dispatch(addPack())
+        })
     packsAPI.getPacks()
         .then((res) => {
             dispatch(setPacks(res.data.cardPacks))

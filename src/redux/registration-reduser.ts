@@ -80,9 +80,11 @@ export const setNewPassTC = (pass:string,token:string) => (dispatch: Dispatch) =
         .then(res=>{
             debugger
             console.log(res);
-            // dispatch(succesRequestAC(message))
+            let message = res.statusText
+            dispatch(succesRequestAC(message))
         }).catch(err=>{
-            alert(err)
+            // alert(err)
+        dispatch(answerRequestAC(err.response.data.error));
     })
 }
 

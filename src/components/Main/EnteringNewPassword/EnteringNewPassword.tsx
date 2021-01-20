@@ -5,7 +5,7 @@ import Button from "../../common/Button/Button";
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "../../../redux/store";
 import {registrationTC, setNewPassTC} from "../../../redux/registration-reduser";
-import { useParams } from 'react-router-dom';
+import {Redirect, useParams } from 'react-router-dom';
 
 
 export const EnteringNewPassword = () => {
@@ -16,7 +16,7 @@ export const EnteringNewPassword = () => {
     let [password, setPassword] = useState<string>('')
     let [password1, setPassword1] = useState<string>('')
     let [error, setError] = useState<string>('')
-
+let [messages,setMessages]=useState<string>(message)
 
     const onSendHandlerPass = (text: string) => {
         if (text.trim()) {
@@ -32,17 +32,20 @@ export const EnteringNewPassword = () => {
     // @ts-ignore
         const { token } = useParams();
     const onClickHandler = () => {
-
         if(password !== password1){
             setError('пароли не совпадают')
             setPassword1('')
         }else{
             dispatch(setNewPassTC(password, token))
         }
-        console.log({token});
-
     }
-
+//     debugger
+// if(!messages){
+//    return <Redirect to={'/packs'}/>
+//    setTimeout(()=> {
+//        setMessages('')
+//    },3000)
+//}
     return (
         <div className={cl.registration}>
             <div className={cl.center}>
