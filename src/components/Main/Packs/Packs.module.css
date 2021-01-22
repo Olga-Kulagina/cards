@@ -4,7 +4,14 @@
     border: 1px solid blue;
     text-align: center;
 }
-
+.wrap{
+    width: 90%;
+    margin: 20px auto;
+}
+.flexWrap{
+    display: flex;
+    justify-content: space-between;
+}
 .name {
     width: 200px;
 }

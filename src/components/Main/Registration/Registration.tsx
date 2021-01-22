@@ -52,7 +52,7 @@ export const Registration = () => {
 
     }
 
-    //login: jhbjhj@mijni.ruj password: 12345678
+    // login: jhbjhj@mijni.ruj password: 12345678
     if (registeredStatus) {
         return <Redirect to={'/login'}/>
     }

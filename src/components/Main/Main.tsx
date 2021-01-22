@@ -17,7 +17,7 @@ export const PATH = {
     PROFILE: "/profile",
     ERROR404: "/404",
     PASS_RECOVERY: "/password-recovery",
-    PASS_NEW: "/entering-new-password",
+    PASS_NEW: "/entering-new-password/:token",
     TEST: "/test",
     PACKS: "/packs",
 }
