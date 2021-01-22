@@ -33,7 +33,9 @@ export const profileTC = () => (dispatch: Dispatch<ActionsType>) => {
             dispatch(setIsAuthorized(true, res.data.name))
         })
         .catch((err) => {
-            dispatch(setError(err.response.data.error))
+            if(err.response){
+                dispatch(setError(err.response.data.error))
+            }
         })
 }
 
