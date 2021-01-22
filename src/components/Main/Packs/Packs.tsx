@@ -30,7 +30,7 @@ export const Packs = () => {
         ollPacks= packs.filter(pack=> pack.name.includes(nameSearch) )
     }
     if(abcType==='ABC') {
-        debugger
+
        ollPacks= [...ollPacks].sort((a, b) => {
             if (a.name > b.name) {return 1}
             if (a.name < b.name) {return -1}

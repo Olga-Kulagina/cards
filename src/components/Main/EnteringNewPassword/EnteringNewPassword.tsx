@@ -39,7 +39,7 @@ let [messages,setMessages]=useState<string>(message)
             dispatch(setNewPassTC(password, token))
         }
     }
-//     debugger
+
 // if(!messages){
 //    return <Redirect to={'/packs'}/>
 //    setTimeout(()=> {

@@ -50,24 +50,23 @@ export const succesRequestAC = (message:string) => ({type: 'SUCCESHOST',message}
 export const registrationTC = (email: string, password: string) => (dispatch: Dispatch) => {
         RegistrationApi.setUser(email, password)
             .then(res => {
-                debugger
                 console.log(res.data);
                 console.log(res.statusText);
                 let message = res.statusText
                 dispatch(registrationAC(email, password))
                 dispatch(succesRequestAC(message))
             }).catch((err) => {
-                debugger
+
             // let errorText =  err.toString();
             dispatch(answerRequestAC(err.response.data.error));
             // console.log(errorText);
         })
     }
 export const deleteAccTC = () => (dispatch: Dispatch) =>{
-    debugger
+
     RegistrationApi.deleteUser()
         .then(res=>{
-            debugger
+
             console.log(res);
             // dispatch(succesRequestAC(message))
         }).catch(err=>{
@@ -75,10 +74,10 @@ export const deleteAccTC = () => (dispatch: Dispatch) =>{
     })
 }
 export const setNewPassTC = (pass:string,token:string) => (dispatch: Dispatch) =>{
-    debugger
+
     SetNewPass.set(pass, token)
         .then(res=>{
-            debugger
+
             console.log(res);
             let message = res.statusText
             dispatch(succesRequestAC(message))

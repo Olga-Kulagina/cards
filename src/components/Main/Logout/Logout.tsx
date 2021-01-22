@@ -10,7 +10,7 @@ export const Logout = () => {
     const dispatch = useDispatch()
 
     const deleteAcc = () => {
-        // debugger
+
         dispatch(deleteAccTC())
     }
 

@@ -27,7 +27,7 @@ export const Registration = () => {
     }, [registeredStatus])
 
     const onSendHandlerEmail = (text: string) => {
-        // debugger
+
         if (text.trim()) {
             setError('')
             setEmail(text)
