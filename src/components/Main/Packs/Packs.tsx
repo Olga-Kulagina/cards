@@ -47,7 +47,17 @@ export const Packs = () => {
         })
 
     }
-        if (isAuthorized) {
+        if (!isAuthorized) {
+
+    return (
+        <div className={s.center}>
+            you are not authorized /ᐠ-ꞈ-ᐟ\
+        </div>
+
+    )
+}
+
+
     return (
         <div className={s.wrap}>
             <div className={s.flexWrap}>
@@ -74,19 +84,11 @@ export const Packs = () => {
                 </div>
                 <div>
                     {ollPacks.map((p, index) => <Pack key={index} _id={p._id}
-                                                   userId={p.userId} name={p.name} cardsCount={p.cardsCount}
-                                                   updated={p.updated} url={p.url}/>)
+                                                      userId={p.userId} name={p.name} cardsCount={p.cardsCount}
+                                                      updated={p.updated} url={p.url}/>)
                     }
                 </div>
             </>
-        </div>
-    )
-}
-
-
-    return (
-        <div className={s.center}>
-            you are not authorized /ᐠ-ꞈ-ᐟ\
         </div>
     )
 

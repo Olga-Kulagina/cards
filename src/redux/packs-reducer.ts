@@ -1,5 +1,7 @@
-import {Dispatch} from 'redux';
+import {Action, Dispatch} from 'redux';
 import {packsAPI} from '../components/Main/Packs/api-packs';
+import {ThunkAction} from 'redux-thunk';
+import {AppRootStateType} from './store';
 
 export type PackType = {
     _id: string
@@ -75,34 +77,40 @@ export const getPacksTC = () => (dispatch: Dispatch<ActionsType>) => {
             dispatch(setPacks(res.data.cardPacks))
         })
 }
-export const addPackTC = () => (dispatch: Dispatch<ActionsType>) => {
+export const addPackTC = () => (dispatch: any) => {
     packsAPI.addPack()
         .then((res) => {
             dispatch(addPack())
         })
-    packsAPI.getPacks()
-        .then((res) => {
-            dispatch(setPacks(res.data.cardPacks))
-        })
+        .then(dispatch(getPacksTC()))
+    // packsAPI.getPacks()
+    //     .then((res) => {
+    //         dispatch(setPacks(res.data.cardPacks))
+    //     })
 }
-export const deletePackTC = (id: string) => (dispatch: Dispatch<ActionsType>) => {
+
+// ThunkAction<void, RootState, unknown, Action<string>>
+
+export const deletePackTC = (id: string) => (dispatch: any) => {
     packsAPI.deletePack(id)
         .then((res) => {
             dispatch(deletePack())
         })
-    packsAPI.getPacks()
-        .then((res) => {
-            dispatch(setPacks(res.data.cardPacks))
-        })
+        .then(dispatch(getPacksTC()))
+    // packsAPI.getPacks()
+    //     .then((res) => {
+    //         dispatch(setPacks(res.data.cardPacks))
+    //     })
 }
-export const updatePackTC = (id: string) => (dispatch: Dispatch<ActionsType>) => {
+export const updatePackTC = (id: string) => (dispatch: any) => {
     packsAPI.updatePack(id)
         .then((res) => {
             dispatch(updatePack())
         })
-    packsAPI.getPacks()
-        .then((res) => {
-            dispatch(setPacks(res.data.cardPacks))
-        })
+        .then(dispatch(getPacksTC()))
+    // packsAPI.getPacks()
+    //     .then((res) => {
+    //         dispatch(setPacks(res.data.cardPacks))
+    //     })
 }
 
