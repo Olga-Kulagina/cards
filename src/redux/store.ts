@@ -5,6 +5,7 @@ import {loginReducer} from './login-reducer';
 import {forgotReducer} from './forgot-reducer';
 import {profileReducer} from './profile-reducer';
 import {packsReducer} from './packs-reducer';
+import {cardsReducer} from './cards-reducer';
 import registerReduser from "./registration-reduser";
 import {filterOrSearchReducer} from "./filterOrSearch-reducer";
 
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
     forgot: forgotReducer,
     profile: profileReducer,
     packs: packsReducer,
+    cards: cardsReducer,
     search: filterOrSearchReducer,
 })
 

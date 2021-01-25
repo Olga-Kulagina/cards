@@ -9,6 +9,7 @@ import {EnteringNewPassword} from './EnteringNewPassword/EnteringNewPassword';
 import {Test} from '../Test';
 import {Logout} from './Logout/Logout';
 import {Packs} from './Packs/Packs';
+import {Cards} from './Cards/Cards';
 
 export const PATH = {
     LOGIN: "/login",
@@ -19,7 +20,7 @@ export const PATH = {
     PASS_RECOVERY: "/password-recovery",
     PASS_NEW: "/entering-new-password/:token",
     TEST: "/test",
-    PACKS: "/packs",
+    PACKS: "/packs"
 }
 
 export const Main = () => {
@@ -37,6 +38,7 @@ export const Main = () => {
                 <Route path={PATH.PASS_NEW} render={() => <EnteringNewPassword/>}/>
                 <Route path={PATH.TEST} render={() => <Test/>}/>
                 <Route path={PATH.PACKS} render={() => <Packs/>}/>
+                <Route path={'/cards/:id'} render={() => <Cards/>}/>
 
                 <Route render={() => <Error404/>}/>
             </Switch>

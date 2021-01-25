@@ -2,6 +2,8 @@ import React from 'react'
 import {useDispatch} from 'react-redux';
 import s from './Pack.module.css'
 import {deletePackTC, PackType, updatePackTC} from '../../../../redux/packs-reducer';
+import {PATH} from '../../Main';
+import {NavLink} from 'react-router-dom';
 
 
 export const Pack = (props: PackType) => {
@@ -31,7 +33,7 @@ export const Pack = (props: PackType) => {
             <div className={s.buttons}>
                 <button onClick={deletePack}>Del</button>
                 <button onClick={updatePack}>Update</button>
-                <a href='#'>cards</a>
+                <NavLink to={`/cards/${props._id}`} activeClassName={s.active}>cards</NavLink>
             </div>
         </div>
 

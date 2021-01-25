@@ -57,7 +57,7 @@ export const Packs = () => {
         setcollaps(!collaps)
         setPopupId("3")
     }
-        if (isAuthorized) {
+        if (true) {
     return (
         <div className={s.wrap}>
             <div className={s.flexWrap}>

@@ -1,0 +1,24 @@
+.tableRow {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid blue;
+    text-align: center;
+}
+.question {
+    width: 200px;
+}
+.answer {
+    width: 100px;
+}
+.grade {
+    width: 200px;
+}
+.updated {
+    width: 200px;
+}
+.url {
+    width: 200px;
+}
+.buttons {
+    width: 200px;
+}
