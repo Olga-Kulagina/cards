@@ -7,6 +7,7 @@ import {Pack} from './Pack/Pack';
 import {profileTC} from '../../../redux/profile-reducer';
 import {Search} from "./search/Search";
 import {Sort} from "./sort/Sort";
+import {ExampleModal} from "../modal/EampleModal";
 
 
 export const Packs = () => {
@@ -47,10 +48,22 @@ export const Packs = () => {
         })
 
     }
+    let [popupId, setPopupId] = useState('')
+    let [collaps, setcollaps] = useState(false)
+    const onCansel = () => {
+        setcollaps(!collaps)
+    }
+    const OnClickHandler = () =>{
+        setcollaps(!collaps)
+        setPopupId("3")
+    }
         if (isAuthorized) {
     return (
         <div className={s.wrap}>
             <div className={s.flexWrap}>
+                <button id='3' onClick={OnClickHandler}>open popup</button>
+                <ExampleModal collaps={collaps && popupId === '3'} onCansel={onCansel}
+                                     children={<h6>some text</h6>}/>
                 <Search/>
                 <Sort items={[{title:"ABC",value:"ABC"},{title:"CBA",value:"CBA"},{title:"Rting",value:"Rting"}]}/>
             </div>
