@@ -33,7 +33,8 @@ export const Pack = (props: PackType) => {
             <div className={s.buttons}>
                 <button onClick={deletePack}>Del</button>
                 <button onClick={updatePack}>Update</button>
-                <NavLink to={`/cards/${props._id}`} activeClassName={s.active}>cards</NavLink>
+                <NavLink className={s.link} to={`/cards/${props._id}`} activeClassName={s.active}>cards</NavLink>
+                <NavLink className={s.link} to={`/learn/${props._id}`} activeClassName={s.active}>learn</NavLink>
             </div>
         </div>
 

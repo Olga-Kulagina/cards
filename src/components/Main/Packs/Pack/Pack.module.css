@@ -18,5 +18,10 @@
     width: 200px;
 }
 .buttons {
-    width: 200px;
+    width: 250px;
+}
+
+.link {
+    text-decoration: none;
+    margin: 0px 10px;
 }

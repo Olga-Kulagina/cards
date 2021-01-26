@@ -10,6 +10,7 @@ import {Test} from '../Test';
 import {Logout} from './Logout/Logout';
 import {Packs} from './Packs/Packs';
 import {Cards} from './Cards/Cards';
+import {Learn} from './Learn/Learn';
 
 export const PATH = {
     LOGIN: "/login",
@@ -39,6 +40,7 @@ export const Main = () => {
                 <Route path={PATH.TEST} render={() => <Test/>}/>
                 <Route path={PATH.PACKS} render={() => <Packs/>}/>
                 <Route path={'/cards/:id'} render={() => <Cards/>}/>
+                <Route path={'/learn/:id'} render={() => <Learn/>}/>
 
                 <Route render={() => <Error404/>}/>
             </Switch>
