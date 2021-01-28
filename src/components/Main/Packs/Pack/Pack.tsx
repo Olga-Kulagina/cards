@@ -2,7 +2,6 @@ import React from 'react'
 import {useDispatch} from 'react-redux';
 import s from './Pack.module.css'
 import {deletePackTC, PackType, updatePackTC} from '../../../../redux/packs-reducer';
-import {PATH} from '../../Main';
 import {NavLink} from 'react-router-dom';
 
 

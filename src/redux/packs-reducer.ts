@@ -83,13 +83,8 @@ export const addPackTC = () => (dispatch: any) => {
             dispatch(addPack())
         })
         .then(dispatch(getPacksTC()))
-    // packsAPI.getPacks()
-    //     .then((res) => {
-    //         dispatch(setPacks(res.data.cardPacks))
-    //     })
 }
 
-// ThunkAction<void, RootState, unknown, Action<string>>
 
 export const deletePackTC = (id: string) => (dispatch: any) => {
     packsAPI.deletePack(id)
@@ -97,10 +92,6 @@ export const deletePackTC = (id: string) => (dispatch: any) => {
             dispatch(deletePack())
         })
         .then(dispatch(getPacksTC()))
-    // packsAPI.getPacks()
-    //     .then((res) => {
-    //         dispatch(setPacks(res.data.cardPacks))
-    //     })
 }
 export const updatePackTC = (id: string) => (dispatch: any) => {
     packsAPI.updatePack(id)
@@ -108,9 +99,5 @@ export const updatePackTC = (id: string) => (dispatch: any) => {
             dispatch(updatePack())
         })
         .then(dispatch(getPacksTC()))
-    // packsAPI.getPacks()
-    //     .then((res) => {
-    //         dispatch(setPacks(res.data.cardPacks))
-    //     })
 }
 
