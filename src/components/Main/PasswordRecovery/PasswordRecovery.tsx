@@ -4,14 +4,13 @@ import s from './PasswordRecovery.module.css';
 import Input from '../../common/Input/Input';
 import Button from '../../common/Button/Button';
 import {useDispatch, useSelector} from 'react-redux';
-import {forgotTC, newPasswordRequestType} from '../../../redux/forgot-reducer';
+import {forgotTC} from '../../../redux/forgot-reducer';
 import {AppRootStateType} from '../../../redux/store';
 
 export const PasswordRecovery = () => {
 
     const dispatch = useDispatch()
 
-    const newPasswordRequest = useSelector<AppRootStateType, newPasswordRequestType>(state => state.forgot.newPasswordRequest)
     const requestMessage = useSelector<AppRootStateType, string>(state => state.forgot.message)
     const errorMessage = useSelector<AppRootStateType, string>(state => state.forgot.error)
 
@@ -21,7 +20,7 @@ export const PasswordRecovery = () => {
             from: 'test-front-admin <ai73a@yandex.by>',
             message: `<div style="background-color: lime; padding: 15px"> 
 password recovery link:
- <a href='http://localhost:3000/cards#/entering-new-password/$token$'> link</a></div>`,
+ <a href='http://olga-kulagina.github.io/cards/#/entering-new-password/$token$'> link</a></div>`,
         },
         onSubmit: values => {
             dispatch(forgotTC(values))

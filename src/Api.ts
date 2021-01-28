@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instans = axios.create({
-    baseURL: 'http://localhost:7542/2.0/',
+    baseURL: 'https://neko-back.herokuapp.com/2.0/',
     withCredentials: true,
 })
 // baseURL: 'https://neko-back.herokuapp.com/2.0/',
