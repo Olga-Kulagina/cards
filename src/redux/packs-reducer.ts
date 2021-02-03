@@ -82,7 +82,9 @@ export const addPackTC = () => (dispatch: any) => {
         .then((res) => {
             dispatch(addPack())
         })
-        .then(dispatch(getPacksTC()))
+        .then(() => {
+            dispatch(getPacksTC())
+        })
 }
 
 
@@ -91,13 +93,17 @@ export const deletePackTC = (id: string) => (dispatch: any) => {
         .then((res) => {
             dispatch(deletePack())
         })
-        .then(dispatch(getPacksTC()))
+        .then(() => {
+            dispatch(getPacksTC())
+        })
 }
 export const updatePackTC = (id: string) => (dispatch: any) => {
     packsAPI.updatePack(id)
         .then((res) => {
             dispatch(updatePack())
         })
-        .then(dispatch(getPacksTC()))
+        .then(() => {
+            dispatch(getPacksTC())
+        })
 }
 
